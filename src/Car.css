@@ -1,0 +1,13 @@
+.car:hover {
+    opacity: 0.81;
+
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+
+}
+.stats {
+    margin-left: 100px;
+}

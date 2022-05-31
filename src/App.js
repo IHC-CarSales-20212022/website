@@ -1,42 +1,33 @@
-import React from 'react'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import MainPage from './components/mainpage'
-import Login from './components/login'
-import SignUp from './components/signup'
+import logo from './logo.svg';
+import './App.css';
+import Navbar from './Components/Navbar';
+import Shop from './Components/Shop';
+import { useState } from 'react';
+import { BrowserRouter as Router , Route , Routes } from 'react-router-dom';
+import Home from './Components/Home';
+import Buy from './Components/Buy'
+
 function App() {
+  const toggleNav = () => {
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+    navbarLinks.classList.toggle('active')
+  }
+  
+  
+
+
   return (
-    <Router>
-      <div className="App">
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-          <div className="container">
-            <Link className="navbar-brand" to={'/website'}>
-              Plataforma
-            </Link>
-            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link className="nav-link" to={'/website/login'}>
-                    Login
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to={'/website/sign-up'}>
-                    Sign up
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <Routes>
-          <Route path="/website" element={<MainPage />} />
-          <Route path="/website/login" element={<Login />} />
-          <Route path="/website/sign-up" element={<SignUp />} />
-        </Routes>
-      </div>
-    </Router>
-  )
+  <Router> 
+    <div className="App">
+      <Navbar onToggle = {toggleNav}/>
+      <Routes>
+        <Route path="/" exact element={<Home />}/>
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/buy" element={<Buy />} />
+      </Routes>
+    </div>
+  </Router> 
+  );
 }
-export default App
+
+export default App;

@@ -1,0 +1,12 @@
+.Home {
+    background-image: url(road.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-btn {
+    width: 100px;
+}

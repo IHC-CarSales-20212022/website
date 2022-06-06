@@ -8,83 +8,223 @@ import { Drawer, Button } from 'antd';
 
 const Shop = () => {
 
-  
+    const carlist = [{
+        id: '1',
+        brand: 'Saab',
+        model: '9-3',
+        price: 3500,
+        fuel: 'Diesel',
+        district:'Aveiro',
+        mileage: 124000,
+        year: 2001,
+        visible: 7,
+        photo:"https://www.carsinvasion.com/gallery/2006-saab-93-sportcombi/2006-saab-93-sportcombi-05.jpg",
+    },
+    {
+        id: '2',
+        brand: 'Mercedes',
+        model: 'Benz',
+        price: 15000,
+        fuel: 'Diesel',
+        district:'Viseu',
+        mileage: 121211,
+        year: 2007,
+        visible: 7,
+        photo:"https://www.carsinvasion.com/gallery/2007-mercedes-benz-s-63-amg/2007-mercedes-benz-s-63-amg-04.jpg",
+    },
+    {
+        id: '3',
+        brand: 'Audi',
+        model: 'R8',
+        price: 75000,
+        fuel: 'Petrol',
+        district:'Lisboa',
+        mileage: 101293,
+        year: 2011,
+        visible: 7,
+        photo:"https://www.hdcarwallpapers.com/walls/2010_audi_r8_5_2_fsi_quattro_3-wide.jpg",
+    },
+    {
+       id: '4',
+       brand: 'Audi',
+       model: 'A4',
+       price: 17500,
+       fuel: 'Petrol',
+       district:'Aveiro',
+       mileage: 56523,
+       year: 2017,
+       visible: 7,
+       photo:"https://wallpapersdsc.net/wp-content/uploads/2016/10/Audi-A4-2017-Images.jpg",
+    },
+    {
+        id: '5',
+        brand: 'Toyota',
+        model: 'Corolla',
+        price: 7300,
+        fuel: 'Diesel',
+        district:'Braga',
+        mileage: 221971,
+        year: 2009,
+        visible: 7,
+        photo:"https://pictures.topspeed.com/IMG/jpg/200710/2009-toyota-corolla-10.jpg",
+    },
+    {
+        id: '6',
+        brand: 'Saab',
+        model: '9-3',
+        price: 3500,
+        fuel: 'Diesel',
+        district:'Aveiro',
+        mileage: 124000,
+        year: 2001,
+        visible: 7,
+        photo:"https://www.carsinvasion.com/gallery/2006-saab-93-sportcombi/2006-saab-93-sportcombi-05.jpg",
+    },
+    {
+        id: '7',
+        brand: 'Mercedes',
+        model: 'Benz',
+        price: 15000,
+        fuel: 'Diesel',
+        district:'Viseu',
+        mileage: 121211,
+        year: 2007,
+        visible: 7,
+        photo:"https://www.carsinvasion.com/gallery/2007-mercedes-benz-s-63-amg/2007-mercedes-benz-s-63-amg-04.jpg",
+    },
+    {
+        id: '8',
+        brand: 'Audi',
+        model: 'R8',
+        price: 75000,
+        fuel: 'Petrol',
+        district:'Lisboa',
+        mileage: 101293,
+        year: 2011,
+        visible: 7,
+        photo:"https://www.hdcarwallpapers.com/walls/2010_audi_r8_5_2_fsi_quattro_3-wide.jpg",
+    },
+    {
+        id: '9',
+        brand: 'Audi',
+        model: 'A4',
+        price: 17500,
+        fuel: 'Petrol',
+        district:'Aveiro',
+        mileage: 56523,
+        year: 2017,
+        visible: 7,
+        photo:"https://wallpapersdsc.net/wp-content/uploads/2016/10/Audi-A4-2017-Images.jpg",
+    },
+    {
+        id: '10',
+        brand: 'Toyota',
+        model: 'Corolla',
+        price: 7300,
+        fuel: 'Diesel',
+        district:'Braga',
+        mileage: 221971,
+        year: 2009,
+        visible: 7,
+        photo:"https://pictures.topspeed.com/IMG/jpg/200710/2009-toyota-corolla-10.jpg",
+    }];
     
-    const [cars, setCars] = useState([
+    const [cars, setCars] = useState(carlist)
 
-        {
-            id: '1',
-            brand: 'Saab',
-            model: '9-3',
-            price: 3500,
-            fuel: 'Diesel',
-            district:'Aveiro',
-            mileage: 124000,
-            year: 2001,
-            visible: 7,
-            photo:"https://www.carsinvasion.com/gallery/2006-saab-93-sportcombi/2006-saab-93-sportcombi-05.jpg",
-        },
-        {
-            id: '2',
-            brand: 'Mercedes',
-            model: 'Benz',
-            price: 15000,
-            fuel: 'Diesel',
-            district:'Viseu',
-            mileage: 121211,
-            year: 2007,
-            visible: 7,
-            photo:"https://www.carsinvasion.com/gallery/2007-mercedes-benz-s-63-amg/2007-mercedes-benz-s-63-amg-04.jpg",
-      },
-      {
-            id: '3',
-            brand: 'Audi',
-            model: 'R8',
-            price: 75000,
-            fuel: 'Petrol',
-            district:'Lisboa',
-            mileage: 101293,
-            year: 2011,
-            visible: 7,
-            photo:"https://www.hdcarwallpapers.com/walls/2010_audi_r8_5_2_fsi_quattro_3-wide.jpg",
-    },
-    {
-           id: '4',
-           brand: 'Audi',
-           model: 'A4',
-           price: 17500,
-           fuel: 'Petrol',
-           district:'Aveiro',
-           mileage: 56523,
-           year: 2017,
-           visible: 7,
-           photo:"https://wallpapersdsc.net/wp-content/uploads/2016/10/Audi-A4-2017-Images.jpg",
-    },
-    {
-          id: '5',
-          brand: 'Toyota',
-          model: 'Corolla',
-          price: 7300,
-          fuel: 'Diesel',
-          district:'Braga',
-          mileage: 221971,
-          year: 2009,
-          visible: 7,
-          photo:"https://pictures.topspeed.com/IMG/jpg/200710/2009-toyota-corolla-10.jpg",
+    const getBrandStatus = () => {
+        var Elem = document.getElementsByClassName("brand-drop")[0]
+        var value = Elem.value
+        return value;
     }
-    ])
     
-   const updateSearchBrand = () => {
-       var Elem = document.getElementsByClassName("brand-drop")[0]
-       var value = Elem.value
-       if (value !== "Any") {
-            setCars(cars.map((car) => ((car.brand !== value)) ? { ...car, visible: (car.visible - 1)} : car))   } 
-       }
+    const updateSearchBrand = () => {
+        var Elem = document.getElementsByClassName("brand-drop")[0]
+        var value = Elem.value
+        if (value !== "Any") {
+            setCars(cars.map((car) => ((car.brand !== value)) ? { ...car, visible: (car.visible - 1)} : car))   
+        }
+    }
     
     const updateSearchModel = () => {
-       var Elem = document.getElementsByClassName("model-drop")[0]
-       var value = Elem.value
-       console.log(value)
+        var Elem = document.getElementsByClassName("model-drop")[0]
+        var value = Elem.value
+        if (value !== "Any") {
+            setCars(cars.map((car) => ((car.model !== value)) ? { ...car, visible: (car.visible - 1)} : car))   
+        }
+    }
+
+    const updateFuel = () => {
+        var Elem = document.getElementsByClassName("fuel-drop")[0]
+        var value = Elem.value
+        if (value !== "Any") {
+            setCars(cars.map((car) => ((car.fuel !== value)) ? { ...car, visible: (car.visible - 1)} : car))  
+        }
+    }
+
+    const updateRegion = () => {
+        var Elem = document.getElementsByClassName("local-drop")[0]
+        var value = Elem.value
+        if (value !== "Any") {
+            setCars(cars.map((car) => ((car.district !== value)) ? { ...car, visible: (car.visible - 1)} : car))   
+        }
+    }
+
+    const updateValue = () => {
+        var ElemMin = document.getElementsByClassName("min-price-drop")[0]
+        var ElemMax = document.getElementsByClassName("max-price-drop")[0]
+        var minvalue = ElemMin.value
+        var maxvalue = ElemMax.value
+        if(minvalue !== "0" && maxvalue !== "0"){
+            setCars(cars.map((car) => (!(car.price >= minvalue && car.price <= maxvalue)) ? { ...car, visible: (car.visible - 1)} : car))
+        }
+        else if (minvalue !== "0") {
+            setCars(cars.map((car) => ((car.price <= minvalue)) ? { ...car, visible: (car.visible - 1)} : car))   
+        }
+        else if (maxvalue !== "0") {
+            setCars(cars.map((car) => ((car.price >= maxvalue)) ? { ...car, visible: (car.visible - 1)} : car))   
+        }
+    }
+
+    const updateMileage = () => {
+        var ElemMin = document.getElementsByClassName("min-mileage-drop")[0]
+        var ElemMax = document.getElementsByClassName("max-mileage-drop")[0]
+        var minvalue = ElemMin.value
+        var maxvalue = ElemMax.value
+        if(minvalue !== "0" && maxvalue !== "0"){
+            setCars(cars.map((car) => (!(car.mileage >= minvalue && car.mileage <= maxvalue)) ? { ...car, visible: (car.visible - 1)} : car))
+        }
+        else if (minvalue !== "0") {
+            setCars(cars.map((car) => ((car.mileage <= minvalue)) ? { ...car, visible: (car.visible - 1)} : car))   
+        }
+        else if (maxvalue !== "0") {
+            setCars(cars.map((car) => ((car.mileage >= maxvalue)) ? { ...car, visible: (car.visible - 1)} : car))   
+        }
+        
+    }
+
+    const updateYear = () => {
+        var ElemMin = document.getElementsByClassName("min-year-drop")[0]
+        var ElemMax = document.getElementsByClassName("max-year-drop")[0]
+        var minvalue = ElemMin.value
+        var maxvalue = ElemMax.value
+        if(minvalue !== "Any" && maxvalue !== "Any"){
+            setCars(cars.map((car) => (!(car.year >= minvalue && car.year <= maxvalue)) ? { ...car, visible: (car.visible - 1)} : car))
+        }
+        else if (minvalue !== "Any") {
+            setCars(cars.map((car) => ((car.year <= minvalue)) ? { ...car, visible: (car.visible - 1)} : car))   
+        }
+        else if (maxvalue !== "Any") {
+            setCars(cars.map((car) => ((car.year >= maxvalue)) ? { ...car, visible: (car.visible - 1)} : car))   
+        }
+
+    }
+
+    const updateSearch = () => {
+        setCars(cars.map((car) => car.visible = 7)) 
+        setCars(carlist)
+        updateSearchBrand(); updateSearchModel(); updateFuel(); 
+                updateRegion(); updateValue(); updateMileage(); updateYear();
+
     }
      
     const [visible, setVisible] = useState(false);
@@ -110,6 +250,7 @@ const Shop = () => {
                 <option value="Saab">Saab</option>
                 <option value="Mercedes">Mercedes</option>
                 <option value="Audi">Audi</option>
+                <option value="Toyota">Toyota</option>
             </select>
             <label for="cars">Model </label>
             <select className='model-drop' name="cars" id="cars">
@@ -118,6 +259,8 @@ const Shop = () => {
                 <option value="9-3">9-3</option>
                 <option value="Benz">Benz</option>
                 <option value="A4">A4</option>
+                <option value="R8">R8</option>
+                <option value="Corolla">Corolla</option>
             </select>
         </div>
         <div className='second'>
@@ -421,11 +564,14 @@ const Shop = () => {
             </select>
         </div>
         <div className='right'> 
-            <button className='button' onClick={() => { updateSearchBrand(); updateSearchModel();}} ><span>Search!</span></button>
+            <button className='button' onClick={() => { updateSearch();}} ><span>Search!</span></button>
         </div>
     </div>
-    <div class="flexbox-container">
+    <div class="grid" style = {{height:"100vh"}}>
         <Cars cars = {cars}></Cars>
+    </div>
+    <div class="flexbox-container">
+        
     </div>
     
 </>

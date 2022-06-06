@@ -50,12 +50,14 @@ const Car = ({ car , moreDetails}) => {
       <div className="details">
         <div>
           <Image width={200} src={car.photo}/>
-          <h3>{car.year} {car.brand}    {car.model}</h3>
-          <h5>{car.mileage} Km</h5>
-          <h5>{car.fuel}</h5>
-          <h4>{car.district}</h4>
+          <h1>{car.brand}    {car.model}</h1>
           <h1>{car.price} €</h1>
-          
+          <h6>&nbsp;</h6>
+          <h2> Other Info </h2>
+          <h3>{car.year}</h3>
+          <h3>{car.mileage} km</h3>
+          <h3>{car.fuel}</h3>
+          <h3>{car.district}</h3>
         </div>
         
       <div className="stats">
@@ -66,6 +68,7 @@ const Car = ({ car , moreDetails}) => {
                 <Statistic
                   title="Under Average Market Price"
                   value={9.31}
+                  style={{ width: 330 }}
                   precision={2}
                   valueStyle={{ color: 'green' }}
                   prefix={<ArrowDownOutlined />}
@@ -79,6 +82,7 @@ const Car = ({ car , moreDetails}) => {
             <Col span={25}>
               <Card>
                 <Statistic
+                  style={{ width: 330 }}
                   title="Above Our Average Website Price"
                   value={0.31}
                   precision={2}
@@ -91,8 +95,9 @@ const Car = ({ car , moreDetails}) => {
           </div>
           
           <div className="description">
-            <h3>Description:</h3>
-            <p>Car works like new, with no damage to the interior or exterior, except for a few scratches.Car inspection and oil change was made two months ago.It migh need a tire change soon.</p>
+            <h2>Description:</h2>
+            <p align="justify">Car works like new, with no damage to the interior or exterior, except for a few scratches. Car inspection and oil change was made two months ago.
+              It might need a tire change soon.</p>
             <h2>Contact Information: <PhoneOutlined /> 965242111</h2>
 
           </div>

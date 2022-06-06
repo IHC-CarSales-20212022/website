@@ -16,7 +16,7 @@ const Navbar = ({ onToggle }) => {
             <Link to= '/website'>
                 <li><a href='#'>Home</a></li>
             </Link>
-            <Link to= '/website'>
+            <Link to= '/sell'>
                 <li><a href='#'>Sell</a></li>
               </Link>
             <Link to= '/shop'>  

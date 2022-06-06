@@ -6,6 +6,8 @@ import { useState } from 'react';
 import { BrowserRouter as Router , Route , Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import Buy from './Components/Buy'
+import SellForm from './Components/SellForm'
+import PublishForm from './Components/PublishForm'
 
 function App() {
   const toggleNav = () => {
@@ -13,9 +15,6 @@ function App() {
     navbarLinks.classList.toggle('active')
   }
   
-  
-
-
   return (
   <Router> 
     <div className="App">
@@ -24,6 +23,8 @@ function App() {
         <Route path="/website" exact element={<Home />}/>
         <Route path="/shop" element={<Shop />} />
         <Route path="/buy" element={<Buy />} />
+        <Route path="/sell" element={<SellForm />} />
+        <Route path="/publish" element={<PublishForm />} />
       </Routes>
     </div>
   </Router> 

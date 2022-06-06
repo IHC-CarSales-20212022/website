@@ -109,7 +109,7 @@ const Shop = () => {
         brand: 'Audi',
         model: 'A4',
         price: 17500,
-        fuel: 'Petrol',
+        fuel: 'Diesel',
         district:'Aveiro',
         mileage: 56523,
         year: 2017,
@@ -246,7 +246,7 @@ const Shop = () => {
             <label for="cars">Brand </label>
             <select className='brand-drop' name="cars" id="cars">
                 <option value="Any">Any</option>
-                <option value="volvo">Volvo</option>
+                <option value="Volvo">Volvo</option>
                 <option value="Saab">Saab</option>
                 <option value="Mercedes">Mercedes</option>
                 <option value="Audi">Audi</option>
@@ -269,7 +269,7 @@ const Shop = () => {
                 <option value="Any">Any</option>
                 <option value="Diesel">Diesel</option>
                 <option value="Petrol">Petrol</option>
-                <option value="Eletric">Eletric</option>
+                <option value="Electric">Electric</option>
             </select>
             <label for="cars">Region</label> 
             <select className='local-drop' name="cars" id="cars">

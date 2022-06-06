@@ -1,0 +1,29 @@
+  .site-card-border-less-wrapper {
+    padding: 30px;
+    background: #282c34;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-weight: bold;
+    min-height: 130vh;
+  }
+
+  .left{
+    font-weight: bold;
+    text-align: left;
+    float: left;
+  }
+
+  .left2{
+    font-weight: bold;
+    text-align: left;
+    float: left;
+    width: 100;
+  }
+  
+  .center{
+    font-weight: bold;
+    text-align: center;
+    float: center;
+  }
+  

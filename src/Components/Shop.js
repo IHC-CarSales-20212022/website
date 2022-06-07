@@ -38,7 +38,7 @@ const Shop = () => {
         model: 'R8',
         price: 75000,
         fuel: 'Petrol',
-        district:'Lisboa',
+        district:'Porto',
         mileage: 101293,
         year: 2011,
         visible: 7,
@@ -219,7 +219,7 @@ const Shop = () => {
 
     }
 
-    const updateSearch = () => {
+    const updateSearch = async () => {
         setCars(cars.map((car) => car.visible = 7)) 
         setCars(carlist)
         updateSearchBrand(); updateSearchModel(); updateFuel(); 
@@ -567,7 +567,7 @@ const Shop = () => {
             <button className='button' onClick={() => { updateSearch();}} ><span>Search!</span></button>
         </div>
     </div>
-    <div class="grid" style = {{height:"100vh"}}>
+    <div class="grid" style = {{height:"100%", width:"100%"}}>
         <Cars cars = {cars}></Cars>
     </div>
     <div class="flexbox-container">

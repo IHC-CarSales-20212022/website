@@ -5,22 +5,19 @@ const Navbar = ({ onToggle }) => {
   return (
     <nav className="navbar">
         
-        <div className="brand-title">CarSales</div>
-        <a href='#' className='toggle-button' onClick={onToggle} >
-            <span className='bar'></span>
-            <span className='bar'></span>
-            <span className='bar'></span>
-        </a>
+        <div className="navbar-links2" font-weight="bold"><Link to= '/website'>
+                <li><a href='#'>Car Sale Platform</a></li>
+            </Link></div>
         <div className='navbar-links'>
             <ul>
-            <Link to= '/website'>
-                <li><a href='#'>Home</a></li>
+            <Link to= '/stats'>
+                <li><a href='#'>Market Statistics</a></li>
             </Link>
             <Link to= '/sell'>
-                <li><a href='#'>Sell</a></li>
+                <li><a href='#'>Sell a Car</a></li>
               </Link>
             <Link to= '/shop'>  
-                <li><a href='#'>Browse</a></li>
+                <li><a href='#'>Browse Cars</a></li>
             </Link>
             </ul>
         </div>

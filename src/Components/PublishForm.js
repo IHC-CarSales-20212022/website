@@ -150,7 +150,12 @@ function PublishForm() {
             <br></br>
             <br></br>
     </Card>
-
+    <div class="flexbox-container">
+        
+        </div>
+        <div class="flexbox-container">
+        
+        </div>
     
   </div>
 )};

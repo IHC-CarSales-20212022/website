@@ -8,6 +8,7 @@ import Home from './Components/Home';
 import Buy from './Components/Buy'
 import SellForm from './Components/SellForm'
 import PublishForm from './Components/PublishForm'
+import Stats from './Components/Stats'
 
 function App() {
   const toggleNav = () => {
@@ -20,11 +21,12 @@ function App() {
     <div className="App">
       <Navbar onToggle = {toggleNav}/>
       <Routes>
-        <Route path="/website" exact element={<Home />}/>
+        <Route path="/website" exact element={<Shop />}/>
         <Route path="/shop" element={<Shop />} />
         <Route path="/buy" element={<Buy />} />
         <Route path="/sell" element={<SellForm />} />
         <Route path="/publish" element={<PublishForm />} />
+        <Route path="/stats" element={<Stats />} />
       </Routes>
     </div>
   </Router> 
